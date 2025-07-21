@@ -51,8 +51,7 @@ public class SubirRespuestasMasivasServlet extends HttpServlet {
                 if (fila == null) continue;
 
                 int numeroSesion = ++numeroSesionBase;
-                int idSesion = dao.insertarSesionRespuesta(idFormulario, numeroSesion);
-
+                int idSesion = dao.insertarSesionRespuesta(idFormulario, numeroSesion, idUsuario);
                 if (idSesion == -1) {
                     errores.add("Error al crear la sesión en la fila " + (filaIdx + 1));
                     continue;
@@ -102,9 +101,16 @@ public class SubirRespuestasMasivasServlet extends HttpServlet {
             } else {
                 estadoFinal = "CON_ERRORES";
             }
+            System.out.println("Nombre original: " + nombreOriginal);
+            System.out.println("Tamaño leído: " + contenidoArchivo.length);
+            System.out.println("Estado final: " + estadoFinal);
+
+            System.out.println("ERRORES:");
+            errores.forEach(System.out::println);
 
             dao.insertarArchivo(nombreGenerado, contenidoArchivo, idUsuario, estadoFinal,
                     errores.isEmpty() ? null : String.join("\n", errores), idFormulario);
+            System.out.println("Insertando archivo con nombre: " + nombreGenerado + " y tamaño: " + contenidoArchivo.length);
 
             if (errores.isEmpty()) {
                 request.setAttribute("exito", "Archivo subido correctamente.");
@@ -118,7 +124,7 @@ public class SubirRespuestasMasivasServlet extends HttpServlet {
             request.setAttribute("error", "Ocurrió un error: " + e.getMessage());
         }
 
-        request.getRequestDispatcher("IrASubirRespuestasMasivasServlet?idFormulario=" + idFormulario).forward(request, response);
+        response.sendRedirect("IrASubirRespuestasMasivasServlet?idFormulario=" + idFormulario);
     }
 
     @Override
