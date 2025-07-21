@@ -1,0 +1,947 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ================== SIDEBAR ================== */
+.menu-toggle {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100%;
+    background: linear-gradient(135deg, #dbeeff 60%, #b3ccff 100%);
+    box-shadow: 8px 0 32px rgba(52, 152, 219, 0.13), 2px 0 8px rgba(52, 152, 219, 0.10);
+    border-right: 3px solid #3498db;
+    border-radius: 0 28px 0 0;
+    transition: left 0.3s ease, box-shadow 0.2s;
+    z-index: 2001;
+    overflow-y: auto;
+    padding: 24px 0 20px 0;
+    backdrop-filter: blur(6px);
+}
+
+.menu-toggle:checked ~ .sidebar {
+    left: 0;
+}
+
+.sidebar-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: relative;
+}
+
+.sidebar-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.sidebar-close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+    color: #000;
+}
+
+.sidebar-separator {
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, #b3ccff 0%, #3498db 100%);
+    border-radius: 2px;
+    margin: 18px auto 18px auto;
+    opacity: 0.7;
+}
+
+.menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-links li {
+    margin-bottom: 15px;
+}
+
+.menu-links li a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    margin: 0 15px;
+    border-radius: 8px;
+    color: #1a1a1a;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    min-height: 48px;
+    transition: background-color 0.25s cubic-bezier(0.77,0.2,0.05,1.0),
+                color 0.2s,
+                box-shadow 0.25s cubic-bezier(0.77,0.2,0.05,1.0),
+                transform 0.25s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.menu-links li a i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.menu-links li a:hover {
+    background-color: #b3ccff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    color: #003366;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 2000;
+}
+
+.menu-toggle:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ================== HEADER ================== */
+.header-bar {
+    background: linear-gradient(135deg, #a8d8ff 0%, #87ceeb 100%);
+    height: 56.8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(135,206,235,0.3);
+    position: relative;
+    z-index: 800;
+    width: 100%;
+    padding: 0;
+}
+
+.header-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 0;
+}
+
+.menu-icon {
+    font-size: 26px;
+    cursor: pointer;
+    color: #333;
+    display: inline-block;
+    margin-left: 0;
+}
+
+.logo-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-left: 10px;
+}
+
+.logo-large img {
+    height: 40px;
+    object-fit: contain;
+}
+
+.header-right {
+    display: flex;
+    gap: 2.5rem;
+    margin-left: auto;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    user-select: none;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+}
+
+.nav-item#btn-inicio span {
+    display: none;
+}
+
+.nav-item#btn-encuestador {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 8px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.nav-item#btn-encuestador span {
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    min-width: 140px;
+    z-index: 1001;
+    padding: 8px 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 18px;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: background 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background: #e6f0ff;
+    color: #007bff;
+}
+
+.nav-item.dropdown:focus-within .dropdown-menu,
+.nav-item.dropdown:hover .dropdown-menu,
+.nav-item.dropdown-active .dropdown-menu {
+    display: block;
+}
+
+/* ================== MAIN CONTENT ================== */
+.main-content {
+    padding: 20px;
+    min-height: calc(100vh - 60px);
+    background: #f8f9fa;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: left;
+    font-weight: 600;
+    padding-left: 5px;
+}
+
+/* ================== FORM FILTER ================== */
+.form-filtro {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-left: 4px solid #3498db;
+    border: 1px solid #e9ecef;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filter-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-filtro input[type="date"] {
+    padding: 12px 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 180px;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #495057;
+    cursor: pointer;
+    position: relative;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23495057' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5 0zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+.form-filtro input[type="date"]:focus {
+    border-color: #3498db;
+    background: white;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    transform: translateY(-1px);
+}
+
+.form-filtro input[type="date"]:hover {
+    border-color: #3498db;
+    background: white;
+    transform: translateY(-1px);
+}
+
+/* Ocultar el icono nativo del calendario en algunos navegadores */
+.form-filtro input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    right: 12px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Personalizar el calendario en navegadores webkit */
+.form-filtro input[type="date"]::-webkit-inner-spin-button,
+.form-filtro input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+/* Personalización del calendario popup (solo funciona en algunos navegadores) */
+.form-filtro input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+    border-radius: 4px;
+}
+
+/* Estilos para el placeholder del input de fecha */
+.form-filtro input[type="date"]:invalid {
+    color: #999;
+}
+
+.form-filtro input[type="date"]:focus:invalid {
+    color: #495057;
+}
+
+/* Estilos adicionales para campos de fecha con texto placeholder */
+.filter-group {
+    position: relative;
+}
+
+.filter-group::after {
+    content: 'dd/mm/aaaa';
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 12px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.form-filtro input[type="date"]:invalid + .filter-group::after {
+    opacity: 1;
+}
+
+/* Mejorar la apariencia del grupo de filtro */
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.filter-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.filter-label::before {
+    content: '📅';
+    font-size: 14px;
+}
+
+/* Efecto de enfoque mejorado */
+.form-filtro input[type="date"]:focus + .filter-hint {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.filter-hint {
+    font-size: 11px;
+    color: #6c757d;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+/* Animación para campos de fecha válidos */
+.form-filtro input[type="date"]:valid {
+    border-color: #28a745;
+    background: linear-gradient(135deg, #f8fff9 0%, #f1f8ff 100%);
+}
+
+.form-filtro input[type="date"]:valid:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+/* Efecto de onda al hacer clic */
+.form-filtro input[type="date"] {
+    position: relative;
+    overflow: hidden;
+}
+
+.form-filtro input[type="date"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(52, 152, 219, 0.1);
+    transition: width 0.3s ease, height 0.3s ease;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.form-filtro input[type="date"]:active::before {
+    width: 200px;
+    height: 200px;
+}
+
+/* Mejorar la apariencia del icono del calendario */
+.filter-label::before {
+    content: '📅';
+    font-size: 14px;
+    filter: grayscale(0.3);
+    transition: filter 0.3s ease;
+}
+
+.filter-group:hover .filter-label::before {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+/* Estilo para cuando el campo tiene foco */
+.form-filtro input[type="date"]:focus + .filter-hint {
+    opacity: 1;
+    transform: translateY(0);
+    color: #3498db;
+}
+
+/* Indicador visual de fecha seleccionada */
+.form-filtro input[type="date"]:not(:invalid):not(:placeholder-shown) {
+    background: linear-gradient(135deg, #e8f5e8 0%, #f0f8ff 100%);
+    border-color: #28a745;
+}
+
+.form-filtro input[type="date"]:not(:invalid):not(:placeholder-shown)::after {
+    content: '✓';
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #28a745;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.filter-actions {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    margin-left: 10px;
+}
+
+.btn-filtrar,
+.btn-limpiar {
+    padding: 12px 24px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    min-width: 140px;
+    justify-content: center;
+    height: 44px;
+    white-space: nowrap;
+}
+
+.btn-filtrar {
+    background: #3b82f6;
+    color: white;
+}
+
+.btn-filtrar:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-limpiar {
+    background: transparent;
+    color: #6b7280;
+    border-color: #d1d5db;
+}
+
+.btn-limpiar:hover {
+    background: #f3f4f6;
+    color: #374151;
+    border-color: #9ca3af;
+    transform: translateY(-1px);
+}
+
+/* ================== TABLE ================== */
+.tabla-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.tabla-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-container table thead {
+    background: #3498db;
+}
+
+.tabla-container table thead th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.tabla-container table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tabla-container table tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.tabla-container table tbody tr:hover {
+    background: #e6f3ff;
+}
+
+.tabla-container table tbody td {
+    padding: 15px;
+    vertical-align: middle;
+    color: #333;
+}
+
+/* ================== STATUS BADGES ================== */
+.estado-completado {
+    background: #27ae60;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.estado-en-progreso {
+    background: #f39c12;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ================== PROGRESS BAR ================== */
+.barra-progreso-tabla {
+    width: 100px;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+
+.barra-llenado-tabla {
+    height: 100%;
+    background: #3498db;
+    border-radius: 4px;
+}
+
+.porcentaje-texto {
+    font-size: 11px;
+    color: #666;
+    font-weight: 600;
+}
+
+/* ================== BUTTONS ================== */
+.btn-reingresar-tabla {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn-reingresar-tabla:hover {
+    background: #2980b9;
+}
+
+.texto-completado {
+    color: #27ae60;
+    font-weight: 600;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ================== PAGINATION ================== */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.paginacion form {
+    display: inline-block;
+}
+
+.paginacion button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    min-width: 36px;
+}
+
+.paginacion button:hover {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.paginacion .pagina-activa {
+    background: #3498db !important;
+    color: white !important;
+    border-color: #3498db !important;
+}
+
+/* ================== NO DATA ================== */
+.sin-datos {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+.sin-datos i {
+    font-size: 3rem;
+    color: #ccc;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.sin-datos p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 15px;
+    }
+    
+    .form-filtro {
+        padding: 20px;
+        gap: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .form-filtro input[type="date"] {
+        width: 100%;
+    }
+    
+    .filter-actions {
+        margin-left: 0;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .tabla-container table th,
+    .tabla-container table td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+    
+    .barra-progreso-tabla {
+        width: 60px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .filter-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn-filtrar,
+    .btn-limpiar {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ================== RESPONSIVIDAD MEJORADA ================== */
+@media (max-width: 768px) {
+    /* Header responsive */
+    .header-content {
+        flex-direction: column;
+        height: auto;
+        padding: 0.5rem 1rem;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .header-left,
+    .header-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-right {
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .nav-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Main content responsive */
+    .main-content {
+        width: 95%;
+        margin: 0.5rem auto;
+        padding: 0 10px;
+    }
+
+    /* Tabla responsive mejorada */
+    .tabla-container table {
+        font-size: 0.9rem;
+    }
+
+    .tabla-container th,
+    .tabla-container td {
+        padding: 0.6rem 0.4rem;
+    }
+
+    /* Barra de progreso más visible */
+    .barra-progreso-tabla {
+        height: 8px;
+    }
+
+    /* Estados más legibles */
+    .estado-completado,
+    .estado-borrador {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header para móviles pequeños */
+    .header-bar {
+        height: auto;
+        min-height: 56px;
+    }
+
+    .header-content {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .logo-large img {
+        height: 35px;
+    }
+
+    .nav-item#btn-encuestador span {
+        font-size: 0.8rem;
+    }
+
+    /* Main content muy responsive */
+    .main-content {
+        width: 98%;
+        margin: 0.25rem auto;
+        padding: 0 5px;
+    }
+
+    .main-content h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Formulario de filtros muy responsive */
+    .form-filtro {
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .filter-group input[type="date"] {
+        padding: 0.7rem;
+        font-size: 1rem;
+    }
+
+    /* Tabla muy responsive */
+    .tabla-container {
+        margin: 0 -5px;
+    }
+
+    .tabla-container table {
+        min-width: 500px;
+        font-size: 0.8rem;
+    }
+
+    .tabla-container th,
+    .tabla-container td {
+        padding: 0.5rem 0.3rem;
+    }
+
+    /* Simplificar en móviles pequeños */
+    .tabla-container th:nth-child(4),
+    .tabla-container td:nth-child(4) {
+        display: none; /* Ocultar columna progreso en móviles muy pequeños */
+    }
+
+    /* Botones de acción más grandes */
+    .btn-accion {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    /* Sidebar responsive */
+    .sidebar {
+        width: 260px;
+        left: -260px;
+    }
+
+    .menu-toggle:checked ~ .sidebar {
+        left: 0;
+    }
+
+    /* Paginación responsive */
+    .paginacion {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.3rem;
+    }
+
+    .paginacion button {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}

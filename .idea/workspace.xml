@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="WebProyecto:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e3cdf8d1-97f1-49f4-abfa-b20794774716" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/administrador/AsignacionFormularioDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/coordinador/ArchivoCargadoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/coordinador/AsignacionFormularioDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/coordinador/DashboardAnalyticsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/coordinador/FormularioCoordinadorDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/coordinador/SubidaMasivaDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/encuestador/OpcionPreguntaDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/filters/LoginFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/modelos/RespuestaCompleta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/CambiarEstadoFormularioServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/CrearRespuestaManualServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/GuardarRespuestasManualServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/IrASubirRespuestasMasivasServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/SubirRespuestasMasivasServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/utils/ExcelUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/coordinador/jsp/CrearRespuestaManual.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/coordinador/jsp/SubirRespuestasMasivas.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/coordinador/jsp/asignarFormulario.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/coordinador/jsp/formularioRespuesta.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/ArchivoCargado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/ArchivoCargado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/Carpeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/Carpeta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/CeldaExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/CeldaExcel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/Distrito.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/Distrito.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/Estado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/Estado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/Respuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/Respuesta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/SesionRespuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/SesionRespuesta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/Zona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/beans/Zona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/ArchivoCargadoDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/BaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/BaseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/CodigoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/CodigoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/CredencialDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/CredencialDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/DistritoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/DistritoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/FormularioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/FormularioDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/UsuarioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/UsuarioDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/encuestador/AsignacionFormularioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/encuestador/AsignacionFormularioDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/encuestador/FormularioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/encuestador/FormularioDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/encuestador/PreguntaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/encuestador/PreguntaDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/encuestador/RespuestaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/encuestador/RespuestaDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/encuestador/SesionRespuestaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/encuestador/SesionRespuestaDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/encuestador/VerPerfilDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/encuestador/VerPerfilDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/encuestador/ZonaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/daos/encuestador/ZonaDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/dtos/CoordinadorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/dtos/CoordinadorDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/CerrarSesionServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/CerrarSesionServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/CredencialRegistroServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/CredencialRegistroServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/DownloadServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/DownloadServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/EstablecerContrasenaServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/VerificarCodigoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/VerificarCodigoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/administrador/CrearCoordinadorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/administrador/CrearCoordinadorServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/administrador/CrearUsuarioServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/administrador/ExportarReporteDashboardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/administrador/ExportarReporteDashboardServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/administrador/GenerarReportesEncuestadorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/administrador/GenerarReportesEncuestadorServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/administrador/GenerarReportesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/administrador/GenerarReportesServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/administrador/GestionarCoordinadoresServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/administrador/GestionarCoordinadoresServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/administrador/GestionarEncuestadoresServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/administrador/GestionarEncuestadoresServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/administrador/InicioAdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/administrador/InicioAdminServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/AsignarFormularioServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/AsignarFormularioServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/CargarArchivosServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/CargarArchivosServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/DashboardCoordinadorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/DashboardCoordinadorServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/DashboardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/DashboardServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/GestionEncuestadoresServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/GestionEncuestadoresServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/GestionarFormulariosServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/GestionarFormulariosServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/InicioCoordinadorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/InicioCoordinadorServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/ListarRespuestasFormularioServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/VerContenidoExcelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/coordinador/VerContenidoExcelServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/encuestador/ActualizarPerfilServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/encuestador/ActualizarPerfilServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/encuestador/CambiarContrasenhaServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/encuestador/CambiarContrasenhaServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/encuestador/CrearFormularioServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/encuestador/CrearFormularioServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/encuestador/GuardarRespuestasServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/encuestador/GuardarRespuestasServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/encuestador/InicioEncuestadorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/encuestador/InicioEncuestadorServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/encuestador/VerPerfilServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/servlets/encuestador/VerPerfilServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/utils/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/utils/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/utils/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/utils/Conexion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/utils/MailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/utils/MailSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/utils/PasswordUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webproyecto/utils/PasswordUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/crearCoordinador.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/crearCoordinador.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/crearEncuestador.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/crearEncuestador.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/crearUsuario.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/dashboardAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/dashboardAdmin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/generarReportes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/generarReportes.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/generarReportesCoordi.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/generarReportesCoordi.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/generarReportesEncuestador.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/generarReportesEncuestador.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/gestionarCoordinadores.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/gestionarCoordinadores.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/gestionarEncuestadores.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/gestionarEncuestadores.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cambiarContrasenha.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cambiarContrasenha.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/coordinador/jsp/CargarArchivos.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/coordinador/jsp/CargarArchivos.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/coordinador/jsp/GestionarFormularios.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/coordinador/jsp/GestionarFormularios.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/coordinador/jsp/ListarRespuestasFormulario.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/coordinador/jsp/VerContenidoExcel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/coordinador/jsp/VerContenidoExcel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/coordinador/jsp/VerDashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/coordinador/jsp/VerDashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/coordinador/jsp/VerFormularios.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/coordinador/jsp/VerFormularios.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/establecerContrasena.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/estilos/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/estilos/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/formularioRespuesta.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/formularioRespuesta.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/formularioRespuesta.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/formularioRespuesta.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/formulariosAsignados.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/formulariosAsignados.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/formulariosAsignados.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/formulariosAsignados.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/historialFormularios.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/historialFormularios.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/inicioEncuestador.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/inicioEncuestador.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/registro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registro.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/verPerfil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/verPerfil.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/verificaTuCorreo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/verificaTuCorreo.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="306iZXBUXWh8GkZqJlf7JS5X1DL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.Unknown [compile].executor": "Run",
+    "Maven.WebProyecto [clean].executor": "Run",
+    "Maven.WebProyecto [compile].executor": "Run",
+    "Maven.WebProyecto [package].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Tomcat Server.Tomcat 10.1.41.executor": "Run",
+    "git-widget-placeholder": "RamaPedro",
+    "last_opened_file_path": "D:/presentacionfinal/PROYECTO-OFICIAL-ONU-MUJERES",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Tomcat 10.1.41" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.41" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="WebProyecto:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/WebProyecto" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="c0e812f7-022c-45f8-8c93-b835eb396d71" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52174" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="WebProyecto:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3cdf8d1-97f1-49f4-abfa-b20794774716" name="Changes" comment="" />
+      <created>1752954479144</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752954479144</updated>
+      <workItem from="1752954480424" duration="314000" />
+      <workItem from="1752954820663" duration="26250000" />
+      <workItem from="1752997967581" duration="3746000" />
+      <workItem from="1753038191111" duration="28164000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
