@@ -20,7 +20,7 @@ public class DashboardAnalyticsCoordinadorDao extends BaseDao {
             JOIN asignacionformulario af_coord ON f.idformulario = af_coord.idformulario AND af_coord.idencuestador = ?
             LEFT JOIN asignacionformulario af ON f.idformulario = af.idformulario
             LEFT JOIN sesionrespuesta sr ON af.idasignacionformulario = sr.idasignacionformulario
-            LEFT JOIN usuario u ON af.idencuestador = u.idusuario AND u.idrol = 3
+            LEFT JOIN usuario u ON af.idencuestador = u.idusuario AND u.idrol IN (2,3)
             LEFT JOIN usuario coord ON u.idzonatrabajo = coord.idzonatrabajo AND coord.idusuario = ?
             WHERE sr.estadoterminado = 1
             GROUP BY f.idformulario, f.titulo
@@ -67,7 +67,7 @@ public class DashboardAnalyticsCoordinadorDao extends BaseDao {
             LEFT JOIN usuario coord ON u.idzonatrabajo = coord.idzonatrabajo
             WHERE p.idformulario = ? 
             AND coord.idusuario = ?
-            AND u.idrol = 3 
+            AND u.idrol IN (2, 3) 
             AND sr.estadoterminado = 1
             AND EXISTS (SELECT 1 FROM opcionpregunta WHERE idpregunta = p.idpregunta)
             GROUP BY p.idpregunta, p.textopregunta, p.obligatorio, p.tipopregunta
@@ -147,7 +147,7 @@ public class DashboardAnalyticsCoordinadorDao extends BaseDao {
             WHERE op.idpregunta = ?
             AND coord.idusuario = ?
             AND (sr.estadoterminado = 1 OR sr.estadoterminado IS NULL)
-            AND (u.idrol = 3 OR u.idrol IS NULL)
+            AND (u.idrol IN (2, 3) OR u.idrol IS NULL)
             GROUP BY op.idopcion, op.textoopcion
             ORDER BY cantidad DESC
             """;
