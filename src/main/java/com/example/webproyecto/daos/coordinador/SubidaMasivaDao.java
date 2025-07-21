@@ -116,18 +116,20 @@ public class SubidaMasivaDao extends BaseDao {
         return 0;
     }
 
-    public int insertarSesionRespuesta(int idFormulario, int numeroSesion) {
+    public int insertarSesionRespuesta(int idFormulario, int numeroSesion, int idUsuario) {
         int idSesion = -1;
         String sql = "INSERT INTO sesionrespuesta (fechainicio, fechaenvio, estadoterminado, idasignacionformulario, numeroSesion) " +
                 "SELECT NOW(), NOW(), 1, af.idasignacionformulario, ? " +
                 "FROM asignacionformulario af " +
-                "WHERE af.idFormulario = ? AND af.idEncuestador IS NULL LIMIT 1";
+                "WHERE af.idFormulario = ? AND af.idEncuestador = ? " +
+                "LIMIT 1";
 
         try (Connection conn = getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 
             stmt.setInt(1, numeroSesion);
             stmt.setInt(2, idFormulario);
+            stmt.setInt(3, idUsuario);
 
             stmt.executeUpdate();
 
