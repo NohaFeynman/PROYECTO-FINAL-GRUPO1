@@ -7,6 +7,11 @@
         response.setHeader("Pragma", "no-cache"); // HTTP 1.0
         response.setDateHeader("Expires", 0); // Proxies
     %>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <html>
     <style>
         :root {
@@ -455,7 +460,7 @@
                     <!-- Formulario de carga -->
                     <div class="mb-4">
                         <h5><i class="fas fa-file-upload me-2"></i>2. Subir Archivo Completado</h5>
-                        <form id="uploadForm" action="IrASubirRespuestasMasivasServlet" method="post"
+                        <form id="uploadForm" action="SubirRespuestasMasivasServlet" method="post"
                               enctype="multipart/form-data" class="needs-validation" novalidate>
                             <input type="hidden" name="idFormulario" value="${idFormulario}" />
                             <div class="mb-3">
@@ -594,10 +599,11 @@
 
             // Confirmación antes de subir
             document.getElementById('uploadForm').addEventListener('submit', function(e) {
-                if (!confirm('¿Está seguro de que desea subir este archivo?')) {
-                    e.preventDefault();
-                }
+                e.preventDefault(); // Siempre prevenir primero
+                const modal = new bootstrap.Modal(document.getElementById('confirmModal'));
+                modal.show();
             });
+
 
             // Función para mostrar errores
             function mostrarError(mensaje) {
@@ -631,5 +637,31 @@
 
 
         </script>
+    <!-- Modal personalizado -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmModalLabel">Confirmación</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    ¿Está seguro de que desea subir este archivo?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="btnConfirmarSubida">Subir archivo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('btnConfirmarSubida').addEventListener('click', function () {
+            const form = document.getElementById('uploadForm');
+            // Ahora sí enviamos el formulario
+            form.submit();
+        });
+    </script>
+
     </body>
     </html>
